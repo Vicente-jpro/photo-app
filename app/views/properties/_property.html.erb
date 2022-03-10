@@ -1,0 +1,14 @@
+<div id="<%= dom_id property %>">
+  <p>
+    <strong>Name:</strong>
+    <%= property.name %>
+    
+    <div class="img">
+    <% property.images.each do |image| %>
+      <%= image_tag(image) %>
+    <% end %>
+    <hr>
+    </div>
+  </p>
+
+</div>
