@@ -15,14 +15,16 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
-  <% if property.images %>
-    <% property.images.each do |image| %>
-   
-    <% end %>
-  <% end %>
+
+
+ 
    <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.file_field :images, multiple: true, direct_upload: true%>
+   <% if property.images.attached?%>
+    <%= form.label "Update all Attached image(s)", style: "display: block" %>
+   <% else %>
+    <%= form.label "Attache new image(s)", style: "display: block" %>
+    <% end %>
+    <%= form.file_field :images, multiple: true%>
   </div>
 
   <div>
