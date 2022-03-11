@@ -37,13 +37,13 @@ class PropertiesController < ApplicationController
   # PATCH/PUT /properties/1 or /properties/1.json
   def update
     property = property_params
-    if (property_params[:images].count - 1 ) == 0
+    if do_not_have_image_attached?
       property ={
         id: @property.id,
         name: property_params[:name]
       } 
     end
-    debugger
+    
       respond_to do |format|
         if @property.update(property)
           format.html { redirect_to property_url(@property), notice: "Property was successfully updated." }
@@ -67,6 +67,11 @@ class PropertiesController < ApplicationController
   end
 
   private
+
+   def do_not_have_image_attached?
+    (property_params[:images].count - 1 ) == 0
+   end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_property
       @property = Property.find(params[:id])
