@@ -36,15 +36,24 @@ class PropertiesController < ApplicationController
 
   # PATCH/PUT /properties/1 or /properties/1.json
   def update
-    respond_to do |format|
-      if @property.update(property_params)
-        format.html { redirect_to property_url(@property), notice: "Property was successfully updated." }
-        format.json { render :show, status: :ok, location: @property }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @property.errors, status: :unprocessable_entity }
-      end
+    property = property_params
+    if (property_params[:images].count - 1 ) == 0
+      property ={
+        id: @property.id,
+        name: property_params[:name]
+      } 
     end
+    debugger
+      respond_to do |format|
+        if @property.update(property)
+          format.html { redirect_to property_url(@property), notice: "Property was successfully updated." }
+          format.json { render :show, status: :ok, location: @property }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @property.errors, status: :unprocessable_entity }
+        end
+      end
+   
   end
 
   # DELETE /properties/1 or /properties/1.json

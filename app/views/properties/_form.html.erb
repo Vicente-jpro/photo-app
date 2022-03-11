@@ -15,10 +15,14 @@
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
-
+  <% if property.images %>
+    <% property.images.each do |image| %>
+   
+    <% end %>
+  <% end %>
    <div>
     <%= form.label :image, style: "display: block" %>
-    <%= form.file_field :images, multiple: true %>
+    <%= form.file_field :images, multiple: true, direct_upload: true%>
   </div>
 
   <div>
