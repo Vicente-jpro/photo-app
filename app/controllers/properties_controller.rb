@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
-
+  include PropertiesControllerHelper
   # GET /properties or /properties.json
   def index
     @properties = Property.all.with_attached_images
@@ -38,10 +38,7 @@ class PropertiesController < ApplicationController
   def update
     property = property_params
     if do_not_have_image_attached?
-      property ={
-        id: @property.id,
-        name: property_params[:name]
-      } 
+      property = get_property(@property, property_params) 
     end
     
       respond_to do |format|
