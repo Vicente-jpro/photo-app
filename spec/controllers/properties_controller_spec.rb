@@ -105,9 +105,22 @@ RSpec.describe PropertiesController, type: :controller do
               }
          
          put :update, params: {id: property.id, property: set_property }
+         property.reload
+
          expect(flash[:notice]).to eq("Property was successfully updated.")
+         expect(response).to redirect_to(action: :show, id: assigns(:property).id)
         end
 
+    end
+
+    context "Destroy #destroy" do 
+        let(:property) { create(:property) }
+
+        it "Should destroy a property" do 
+          delete :destroy, params: {id: property.id }
+          expect(flash[:notice]).to eq("Property was successfully destroyed.")
+        end
+        
     end
     
     
