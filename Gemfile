@@ -57,6 +57,10 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "database_cleaner-active_record"
+  gem 'rails-controller-testing'
+  gem "pry"
+  gem "pry-rails"
+  gem "awesome_print"
 end
 
 group :development do
