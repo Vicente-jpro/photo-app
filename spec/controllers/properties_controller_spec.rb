@@ -1,7 +1,8 @@
 require "rails_helper"
 
 RSpec.describe PropertiesController, type: :controller do 
-   
+    
+
     context "GET #index" do
         it "should success and render to index page" do
           get :index 
@@ -70,11 +71,43 @@ RSpec.describe PropertiesController, type: :controller do
 
     context "CREATE #create" do 
         let!(:property) { create(:property)}
+
         it "should create a new property" do 
-          set_property = { name: property.name, images: File.open(Rails.root.join('spec', 'factories', 'images', 'pacaça.jpeg'), filename: 'pacaça.jpeg', content_type: 'image/jpeg') }
+          set_property = { 
+              name: property.name, 
+              images: File.open(Rails.root.join('spec', 'factories', 'images', 'pacaça.jpeg'), 
+              filename: 'pacaça.jpeg', 
+              content_type: 'image/jpeg') 
+           }
           post :create, params: { property: set_property  }
           expect(flash[:notice]).to eq("Property was successfully created.")
         end
+
+        it "not create a new post" do 
+         set_property = { 
+            name: ""
+          }
+         post :create, params: {property: set_property}
+         expect(response).to render_template("new")
+        end
+
+
+    end
+
+    context "PUT #update" do 
+        let(:property) { create(:property)}
+        it "should update a property and notice" do
+            set_property = { 
+                name: property.name, 
+                images:[ File.open(Rails.root.join('spec', 'factories', 'images', 'pacaça.jpeg'), 
+                filename: 'pacaça.jpeg', 
+                content_type: 'image/jpeg') ]
+              }
+         
+         put :update, params: {id: property.id, property: set_property }
+         expect(flash[:notice]).to eq("Property was successfully updated.")
+        end
+
     end
     
     
