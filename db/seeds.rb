@@ -8,8 +8,21 @@
 
 (1..50).each do |number|
     @property = Property.new
-    @property.name = "Nature #{number}"
-    @property.images.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'pacaça.jpeg')), filename: 'pacaça.jpeg', content_type: 'image/jpeg')
+    @property.name = "Naturee #{number}"
+    @property.images.attach([
+
+        io: File.open(Rails.root.join('app', 'assets', 'images', 'nature stock photos.jpeg')), 
+        filename: 'nature stock photos.jpeg', 
+        content_type: 'image/jpeg',
+
+        io: File.open(Rails.root.join('app', 'assets', 'images', 'word nature conservation.jpeg')), 
+        filename: 'word nature conservation.jpeg', 
+        content_type: 'image/jpeg', 
+    
+        io: File.open(Rails.root.join('app', 'assets', 'images', 'pacaça.jpeg')), 
+        filename: 'pacaça.jpeg', 
+        content_type: 'image/jpeg',]
+    )
     @property.save
 end
 
