@@ -25,7 +25,7 @@
     <div class="col">
       <div class="card ">
         <div class="card-img-top">
-          
+          <%= image_tag("Cover-photo.jpeg")%>
         </div>
         <div class="card-body">
           <h5 class="card-title">Flexible renting</h5>
@@ -41,7 +41,7 @@
 
 
 <h1>Properties</h1>
-<!--
+
 <div id="properties">
   <% @properties.each do |property| %>
     <%= render property %>
@@ -50,5 +50,5 @@
     </p>
   <% end %>
 </div>
--->
+
 <%= link_to "New property", new_property_path %>
