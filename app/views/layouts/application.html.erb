@@ -8,7 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    
+
      <!-- Bootstrap CSS -->
     <%= stylesheet_link_tag "custom" %>
     <%= stylesheet_link_tag "materialize-color"%>
@@ -21,6 +21,8 @@
 
   <body>
     <%= render "layouts/navbar" %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

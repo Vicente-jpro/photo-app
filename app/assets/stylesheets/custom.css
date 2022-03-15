@@ -5,3 +5,14 @@
     width: 150px;
     height: auto;
   }
+
+.nav-item:hover{
+ /** grey lighten-4**/
+ color: #e0e0e0 !important;
+ background-color: #f5f5f5;   
+}
+
+.card-img-top{
+    width: 100px;
+    height: 150px;
+}
