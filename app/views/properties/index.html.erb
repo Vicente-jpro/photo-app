@@ -1,61 +1,92 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
 
-<div class="text-center">
-  <h2>Your home wherever you are</h2> 
-  <p>
-    Beautifully designed, fully furnished apartments in São Paulo and Rio de Janeiro to make you feel at home
-  </p>
-  <div class="row d-flex justify-content-center"> 
-    <div class="col-sm-3">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Choose an area</option>
-        <option value="1">Brasil</option>
-        <option value="2">Angola</option>
-        <option value="3">Nigéria</option>
-      </select>
+  <div class="text-center">
+    <h2 class="my-10">Your home wherever you are</h2> 
+    <p>
+      Beautifully designed, fully furnished apartments in São Paulo and Rio de Janeiro to make you feel at home
+    </p>
+    <div class="row d-flex justify-content-center"> 
+      <div class="col-sm-3">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Choose an area</option>
+          <option value="1">Brasil</option>
+          <option value="2">Angola</option>
+          <option value="3">Nigéria</option>
+        </select>
+      </div>
     </div>
+
+    <div class="row my-20">
+      <div class="col my-20">
+         <p><strong>PREMIUM CHOICE</strong></p> 
+         <h4>Living in a Tabas home</h4>
+         <p>We offer fully renovated apartments at the best locations in São Paulo and Rio de Janeiro. Ease, comfort and much more.</p>
+         <button type="button" class="btn btn-dark">Rent now</button>
+      </div>
+      <div class="col-sm-3">
+        <div class="card my-4">
+          <div class="card-img-top img-card my-3">
+            <%= image_tag("word nature conservation-200x183.jpg")%>
+          </div>
+            <h5 class="card-title">Flexible renting</h5>
+        </div>
+        <div class="card my-4">
+          <div class="card-img-top img-card my-3">
+            <%= image_tag("word nature conservation-200x183.jpg")%>
+          </div>
+            <h5 class="card-title">Flexible renting</h5>
+        </div>
+
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-img-top img-card my-3">
+            <%= image_tag("word nature conservation-200x183.jpg")%>
+          </div>
+            <h5 class="card-title">Flexible renting</h5>
+        </div>
+         <div class="card my-4">
+          <div class="card-img-top img-card my-3">
+            <%= image_tag("word nature conservation-200x183.jpg")%>
+          </div>
+            <h5 class="card-title">Flexible renting</h5>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-
-  <div class="row my-4">
-    <div class="col">
-       <p><strong>PREMIUM CHOICE</strong></p> 
-       <h4>Living in a Tabas home</h4>
-       <p>We offer fully renovated apartments at the best locations in São Paulo and Rio de Janeiro. Ease, comfort and much more.</p>
-    </div>
-    <div class="col-sm-3">
-      <div class="card my-4">
-        <div class="card-img-top img-card my-3">
-          <%= image_tag("word nature conservation-200x183.jpg")%>
-        </div>
-          <h5 class="card-title">Flexible renting</h5>
-      </div>
-      <div class="card my-4">
-        <div class="card-img-top img-card my-3">
-          <%= image_tag("word nature conservation-200x183.jpg")%>
-        </div>
-          <h5 class="card-title">Flexible renting</h5>
-      </div>
-
-    </div>
-    <div class="col-sm-3" style="width: 16rem;">
-      <div class="card">
-        <div class="card-img-top img-card my-3">
-          <%= image_tag("word nature conservation-200x183.jpg")%>
-        </div>
-          <h5 class="card-title">Flexible renting</h5>
-      </div>
-       <div class="card my-4">
-        <div class="card-img-top img-card my-3">
-          <%= image_tag("word nature conservation-200x183.jpg")%>
-        </div>
-          <h5 class="card-title">Flexible renting</h5>
-      </div>
-
-    </div>
-  </div>
-
 </div>
-
+<div class="blue lighten-5 ">
+  
+  <div class="container">
+    <div class="row">
+       <div class="col my-5">
+          <div class="my-5"> <p><strong>LANDLORDS</strong></p>  
+            <h4>Renting for Tabas</h4>
+            <p>Relax and get paid. That simple. We renew, renovate, find quality tenants and all the property management. It’s you worry-free.</p> 
+            <button type="button" class="btn btn-dark">Discover more</button>
+          </div>
+       </div>
+       <div class="col my-5">
+         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active ">
+              <%= image_tag("house34.png")%>
+            </div>
+            <div class="carousel-item">
+               <%= image_tag("house2.png")%>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag("house22.png")%>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
 
 
 <h1>Properties</h1>
