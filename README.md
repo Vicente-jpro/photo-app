@@ -6,7 +6,12 @@ For each property, the third photo is the property cover
 The photos are stored locally.
 <br><br>
 I used some special gems to create a database test and to clean all tests:
-[factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [database_cleaner-active_record](https://github.com/DatabaseCleaner/database_cleaner-active_record) and [rails-controller-testing](https://github.com/rails/rails-controller-testing).
+<br>
+[factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails); 
+<br>
+[database_cleaner-active_record](https://github.com/DatabaseCleaner/database_cleaner-active_record); 
+<br>
+[rails-controller-testing](https://github.com/rails/rails-controller-testing).
 
 <pre>
 group :development, :test do
