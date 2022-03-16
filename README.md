@@ -12,8 +12,18 @@ The photos are stored locally.
 <pre>ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-linux]</pre>
 
  Rails:
-<pre>Rails 7
+<pre>Rails 7.0.2.3
 </pre>
 
+## 2 - Model
 
-````````````````````````````````````````````````````````
+```ruby 
+class Property < ApplicationRecord
+    validates :name, presence: true, length: { minimum:3 }
+    has_many_attached :images, dependent: :destroy
+    validates :images, blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'] }
+
+end
+```
+
+`````````````````````````````````````````````````
