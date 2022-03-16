@@ -5,7 +5,8 @@ This application contains 1 model `Property` with a required `name` and `has man
 For each property, the third photo is the property cover
 The photos are stored locally.
 <br><br>
-I used some special gems to create a database test and to clean all tests.
+I used some special gems to create a database test and to clean all tests:
+[factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [database_cleaner-active_record](https://github.com/DatabaseCleaner/database_cleaner-active_record) and [rails-controller-testing](https://github.com/rails/rails-controller-testing).
 
 <pre>
 group :development, :test do
