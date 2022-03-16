@@ -159,7 +159,7 @@ module PropertiesControllerHelper
     end
 end
 ```
-
+## 4 - Factory
 `spec/factories/property.rb`
 ```ruby
 FactoryBot.define do 
@@ -171,7 +171,7 @@ FactoryBot.define do
     end
 end
 ```
-
+## 5 - Spec
 `spec/rails_helper.rb`
 
 ```ruby
