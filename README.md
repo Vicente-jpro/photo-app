@@ -1,6 +1,6 @@
 # Photo-app
 
-* Backend
+* Backend <br>
 This application contains 1 model `Property` with a required `name` and `has many photos`
 For each property, the third photo is the property cover
 The photos are stored locally.
