@@ -126,6 +126,7 @@ end
 ```
 
 ## 3 - Helpers
+`helper/properties_helper.rb`
 ```ruby
 module PropertiesHelper
 
@@ -147,7 +148,7 @@ module PropertiesHelper
 
 end
 ```
-
+`helper/properties_controller_helper.rb`
 ```ruby
 module PropertiesControllerHelper
     def get_property(property, property_name)
