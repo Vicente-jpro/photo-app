@@ -7,7 +7,7 @@ The photos are stored locally.
 <br><br>
 I used some special gems to create a database test and to clean all tests:
 <br>
-[factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails); 
+[factory bot rails](https://github.com/thoughtbot/factory_bot_rails); 
 <br>
 [database_cleaner-active_record](https://github.com/DatabaseCleaner/database_cleaner-active_record); 
 <br>
