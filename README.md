@@ -4,7 +4,17 @@
 This application contains 1 model `Property` with a required `name` and `has many photos`
 For each property, the third photo is the property cover
 The photos are stored locally.
+<br><br>
+I used some special gems to create a database test and to clean all tests.
 
+<pre>
+group :development, :test do
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "database_cleaner-active_record"
+  gem 'rails-controller-testing'
+end
+</pre>
 
 
 ## 1 - Versions
