@@ -1,4 +1,4 @@
-# README
+# Photo-app
 
 * Backend
 Model Property with a required name and has many photos
