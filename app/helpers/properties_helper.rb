@@ -16,4 +16,7 @@ module PropertiesHelper
       image_tag(property.images[2])
     end
 
+  
+
+
 end

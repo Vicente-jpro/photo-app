@@ -6,8 +6,10 @@
     <div class="img">
 
     <% if property.images.attached? %>
-     <%= display_first_image(property) if has_less_than_three_images?(property) %>
-     <%= display_third_image(property) if has_more_than_two_images?(property) %>
+    <p>
+      <%= display_first_image(property) if has_less_than_three_images?(property) %>
+      <%= display_third_image(property) if has_more_than_two_images?(property) %>
+     </p>
     <% end %>
     <hr>
     </div>
