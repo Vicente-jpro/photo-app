@@ -1,12 +1,12 @@
 
 <div class="row d-flex justify-content-center">
-  <div class="col-sm-4">
+  <div class="col d-flex justify-content-center">
     <div id="<%= dom_id property %>">
       <p>
         <strong>Name:</strong>
         <%= property.name %>
         
-        <div class="img">
+        <div class="d-inline p-2">
         <% if property.images.attached? %>
           <% property.images.each do |image| %>
             <%= image_tag(image.variant(:thumb)) %>

@@ -3,7 +3,7 @@ class PropertiesController < ApplicationController
   include PropertiesControllerHelper
   # GET /properties or /properties.json
   def index
-    @properties = Property.all.with_attached_images
+    @properties = Property.with_images
   end
 
   # GET /properties/1 or /properties/1.json

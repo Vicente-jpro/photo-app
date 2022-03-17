@@ -5,5 +5,6 @@ class Property < ApplicationRecord
     has_many_attached :images, dependent: :destroy do |attachable|
         attachable.variant :thumb, resize_to_limit: [350, 350]
     end
-    
+    scope :with_images, -> { order("created_at DESC")}
+    # Ex:- scope :active, -> {where(:active => true)}
 end
