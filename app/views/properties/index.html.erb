@@ -1,136 +1,22 @@
-<div class="container">
-  <p style="color: green"><%= notice %></p>
+<main>
 
-  <div class="text-center">
-    <h2 class="my-10">Your home wherever you are</h2> 
-    <p>
-      Beautifully designed, fully furnished apartments in São Paulo and Rio de Janeiro to make you feel at home
-    </p>
-    <div class="row d-flex justify-content-center"> 
-      <div class="col-sm-3">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Choose an area</option>
-          <option value="1">Brasil</option>
-          <option value="2">Angola</option>
-          <option value="3">Nigéria</option>
-        </select>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="row my-20">
-      <div class="col my-20">
-         <p><strong>PREMIUM CHOICE</strong></p> 
-         <h4>Living in a Tabas home</h4>
-         <p>We offer fully renovated apartments at the best locations in São Paulo and Rio de Janeiro. Ease, comfort and much more.</p>
-         <button type="button" class="btn btn-dark">Rent now</button>
-      </div>
-      <div class="col-sm-3">
-        <div class="card my-4">
-          <div class="card-img-top img-card my-3">
-            <%= image_tag("word nature conservation-200x183.jpg")%>
-          </div>
-            <h5 class="card-title">Flexible renting</h5>
-        </div>
-        <div class="card my-4">
-          <div class="card-img-top img-card my-3">
-            <%= image_tag("word nature conservation-200x183.jpg")%>
-          </div>
-            <h5 class="card-title">Flexible renting</h5>
-        </div>
-
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-img-top img-card my-3">
-            <%= image_tag("word nature conservation-200x183.jpg")%>
-          </div>
-            <h5 class="card-title">Flexible renting</h5>
-        </div>
-         <div class="card my-4">
-          <div class="card-img-top img-card my-3">
-            <%= image_tag("word nature conservation-200x183.jpg")%>
-          </div>
-            <h5 class="card-title">Flexible renting</h5>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-<div class="blue lighten-5 ">
-  
-  <div class="container my-5">
-    <div class="row">
-       <div class="col my-5">
-          <div class="my-5"> <p><strong>LANDLORDS</strong></p>  
-            <h4>Renting for Tabas</h4>
-            <p>Relax and get paid. That simple. We renew, renovate, find quality tenants and all the property management. It’s you worry-free.</p> 
-            <button type="button" class="btn btn-dark">Discover more</button>
-          </div>
-       </div>
-       <div class="col my-5">
-         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active ">
-              <%= image_tag("house34.png")%>
-            </div>
-            <div class="carousel-item">
-               <%= image_tag("house2.png")%>
-            </div>
-            <div class="carousel-item">
-              <%= image_tag("house22.png")%>
-            </div>
-          </div>
-        </div>
-       </div>
-    </div>
-  </div>
-</div>
-
-<div class="container my-8">
-  <h2 class="text-center">What living in Tabas looks like</h2>
-  <div class="row">
-    <div class="col">
-     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= image_tag("photo1.png")%>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag("photo2.png")%>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag("photo4.png")%>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-<%= render "properties/section5" %>
-
-
-  
 
 <h1>Properties</h1>
 
-<div id="properties">
+<div >
   <% @properties.each do |property| %>
     <%= render property %>
     <p>
@@ -138,5 +24,38 @@
     </p>
   <% end %>
 </div>
+
+
+  <div class="album py-5 bg-light" id="properties">
+    <div class="container">
+
+     <p style="color: green"><%= notice %></p>
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @properties.each do |property| %>
+          <div class="card shadow-sm">
+            <div class="col">
+              <%= render property %>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        
+    </div>
+     
+  </div>
+
+</main>
+
 
 <%= link_to "New property", new_property_path %>

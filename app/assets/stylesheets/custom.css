@@ -34,13 +34,3 @@
 .my-20{
     padding-top: 200px;
 }
-
-.form-switch .form-check-input {
-    width: 20em;
-    height: 3em;
-}
-
-.form-check-input:checked {
-    background-color: #424242;
-    border-color: #0d6efd;
-}
