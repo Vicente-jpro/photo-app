@@ -9,11 +9,11 @@ module PropertiesHelper
     end
 
     def display_first_image(property)
-      image_tag(property.images.first)
+      image_tag(property.images.first.variant(:thumb))
     end
 
     def display_third_image(property)
-      image_tag(property.images[2])
+      image_tag(property.images[2].variant(:thumb))
     end
 
   

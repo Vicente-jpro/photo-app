@@ -9,7 +9,7 @@
         <div class="img">
         <% if property.images.attached? %>
           <% property.images.each do |image| %>
-            <%= image_tag(image) %>
+            <%= image_tag(image.variant(:thumb)) %>
           <% end %>
         <% end %>
         <hr>
