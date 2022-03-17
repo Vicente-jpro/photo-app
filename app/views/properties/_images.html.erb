@@ -1,16 +1,22 @@
-<div id="<%= dom_id property %>">
-  <p>
-    <strong>Name:</strong>
-    <%= property.name %>
-    
-    <div class="img">
-    <% if property.images.attached? %>
-      <% property.images.each do |image| %>
-        <%= image_tag(image) %>
-      <% end %>
-    <% end %>
-    <hr>
-    </div>
-  </p>
 
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-4">
+    <div id="<%= dom_id property %>">
+      <p>
+        <strong>Name:</strong>
+        <%= property.name %>
+        
+        <div class="img">
+        <% if property.images.attached? %>
+          <% property.images.each do |image| %>
+            <%= image_tag(image) %>
+          <% end %>
+        <% end %>
+        <hr>
+        </div>
+      </p>
+
+    </div>
+  </div>
 </div>
+

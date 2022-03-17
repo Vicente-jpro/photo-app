@@ -1,33 +1,40 @@
-<%= form_with(model: property) do |form| %>
-  <% if property.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
 
-      <ul>
-        <% property.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<div class="row d-flex justify-content-center">
+  <div class="col-sm-4">
+    <%= form_with(model: property) do |form| %>
+      <% if property.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+          <ul>
+            <% property.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group my-1">
+        <%= form.label :name, style: "display: block" , class:"form-label"%>
+        <%= form.text_field :name, class:"form-control"%>
+      </div>
+
+
+     
+       <div class="form-group mb-3 my-1">
+       <% if property.images.attached?%>
+        <%= form.label "Update all Attached image(s)", class: "form-label" %>
+       <% else %>
+        <%= form.label "Attache new image(s)", class: "form-label" %>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+        <%= form.file_field :images, multiple: true, class:"form-control form-control-sm"%>
+      </div>
 
 
- 
-   <div>
-   <% if property.images.attached?%>
-    <%= form.label "Update all Attached image(s)", style: "display: block" %>
-   <% else %>
-    <%= form.label "Attache new image(s)", style: "display: block" %>
+      <div class="form-group mb-3 my-1">
+        <%= form.submit class:"btn btn-info"%>
+      </div>
     <% end %>
-    <%= form.file_field :images, multiple: true%>
-  </div>
 
-  <div>
-    <%= form.submit %>
   </div>
-<% end %>
+</div>
